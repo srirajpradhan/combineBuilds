@@ -18,7 +18,7 @@ pipeline {
       }
       steps {
 	echo 'Initialize Bhitra Ayo!!!!!!!!!!'
-	'Provision' : {build job: 'Provision'}
+	build job: 'Provision'
       }
     }
 
