@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   parameters {
-   choice(name: 'CHOICE', choices: ['Initalize', 'Operations'], description: 'Pick something')
+   choice(name: 'CHOICE', choices: ['Initialize', 'Operations'], description: 'Pick something')
   }
 
   stages {
@@ -12,18 +12,20 @@ pipeline {
       }
     }
 
-   /*  stage('Initialize System') {
+    stage('Initialize System') {
       when {
-	expression { ${params.CHOICE}}
+	expression { ${params.CHOICE} == 'Initialize'}
       }
       steps {
         try {
-          sh './provision.sh'
+          build(
+            job: 'job/example1',
+          )
         } catch(err) {
           echo 'Aborted Due to ${err}'
         }
       }
-    } */
+    }
 
   }
   post {
