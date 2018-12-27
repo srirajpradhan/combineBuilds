@@ -19,7 +19,7 @@ pipeline {
       steps {
 	echo 'Initialize Bhitra Ayo!!!!!!!!!!'
 	build(
-		job: 'http://localhost:8081/job/example1/'
+		job: 'Provision'
 	)
       }
     }
