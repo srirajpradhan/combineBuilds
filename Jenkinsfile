@@ -18,7 +18,6 @@ pipeline {
       }
       steps {
 	echo 'Initialize Bhitra Ayo!!!!!!!!!!'
-	}
       }
     }
 
