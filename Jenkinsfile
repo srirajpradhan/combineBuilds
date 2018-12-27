@@ -17,13 +17,15 @@ pipeline {
 	expression { ${params.CHOICE} == 'Initialize'}
       }
       steps {
-        try {
-          build(
-            job: 'job/example1',
-          )
-        } catch(err) {
-          echo 'Aborted Due to ${err}'
-        }
+        script {
+        	try {
+         		 build(
+            			job: 'job/example1',
+          		)
+        	} catch(err) {
+          		echo 'Aborted Due to ${err}'
+        	}
+	}
       }
     }
 
