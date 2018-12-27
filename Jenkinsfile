@@ -20,9 +20,6 @@ pipeline {
         script {
         	try {
 			echo 'Initialize Bhitra Ayo!!!!!!!!!!'
-         		 build(
-            			job: 'job/example1',
-          		)
         	} catch(err) {
           		echo 'Aborted Due to ${err}'
         	}
