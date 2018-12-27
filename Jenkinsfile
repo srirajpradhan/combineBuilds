@@ -19,6 +19,7 @@ pipeline {
       steps {
         script {
         	try {
+			echo 'Initialize Bhitra Ayo!!!!!!!!!!'
          		 build(
             			job: 'job/example1',
           		)
