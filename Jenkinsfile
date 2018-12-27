@@ -14,7 +14,7 @@ pipeline {
 
     stage('Initialize System') {
       when {
-	expression { return ${params.CHOICE} == 'Initialize'}
+	expression { params.CHOICE == 'Initialize'}
       }
       steps {
 	echo 'Initialize Bhitra Ayo!!!!!!!!!!'
