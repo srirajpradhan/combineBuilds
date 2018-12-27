@@ -7,7 +7,9 @@ pipeline {
 
   stages {
     stage('Choice') {
-     echo "Choice: ${params.CHOICE}"
+      steps {
+        echo "Choice: ${params.CHOICE}"
+      }
     }
 
    /*  stage('Initialize System') {
