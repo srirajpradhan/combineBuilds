@@ -17,12 +17,7 @@ pipeline {
 	expression { return ${params.CHOICE} == 'Initialize'}
       }
       steps {
-        script {
-        	try {
-			echo 'Initialize Bhitra Ayo!!!!!!!!!!'
-        	} catch(err) {
-          		echo 'Aborted Due to ${err}'
-        	}
+	echo 'Initialize Bhitra Ayo!!!!!!!!!!'
 	}
       }
     }
