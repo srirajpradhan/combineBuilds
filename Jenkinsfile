@@ -26,15 +26,14 @@ pipeline {
       when {
        expression { params.CHOICE == 'Operations'}
       }
+      parameter {
+        choice(name: 'OPTIONS', choices: ['start', 'stop', 'clean'], description: 'Options!!!!!!')
+      }
       steps {
-        sh 'bash ./options.sh'
+        echo 'Operations Bhitra Ayo Hai!!!!!!!!!!!!!!!'
+        build job: 'Operations', parameters: [string(name: 'OPTIONS', value: params.OPTIONS)]
       }
     }
 
-  }
-  post {
-    always {
-	echo 'End of File!!!!!!!!!!!!!!'
-    }
   }
 }

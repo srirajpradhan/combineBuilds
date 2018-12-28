@@ -21,7 +21,7 @@ vagrant up
 
 # Copying Script in Vagrant Machine
 
-scp -o StrictHostKeyChecking=no -i /home/rle0572/vault/src/project/deployScript/vm/.vagrant/machines/default/virtualbox/private_key first.sh vagrant@$(awk 'BEGIN { FS = ", ip:"}{print $2}' Vagrantfile | grep '"'| cut -d '"' -f 2):~/
+scp -o StrictHostKeyChecking=no -i /home/rle0572/vault/src/project/deployScript/vm/.vagrant/machines/default/virtualbox/private_key $SCRIPT vagrant@$(awk 'BEGIN { FS = ", ip:"}{print $2}' Vagrantfile | grep '"'| cut -d '"' -f 2):~/
 
 vagrant ssh -c "./$SCRIPT start"
 echo "outside: $HOME"
