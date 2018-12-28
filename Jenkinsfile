@@ -34,7 +34,7 @@ pipeline {
                             parameters: [choice(name: 'OPTIONS', choices: 'start\nstop\nclean', description: 'Operation to Perform?')]
         }
 	echo "${env.OPTIONS}"
-        build job: 'Operations', parameters: [string(name: 'OPTIONS', value: '${env.OPTIONS}')]
+        build job: 'Operations', parameters: [string(name: 'OPTIONS', value: "${env.OPTIONS}")]
       }
     }
 
