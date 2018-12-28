@@ -19,6 +19,12 @@ pipeline {
       steps {
 	echo 'Initialize Bhitra Ayo!!!!!!!!!!'
 	build (job : 'example1')
+        script {
+                env.OPTIONS = input message: 'Enter Operation to Perform (start | stop | clean)', ok: 'OK',
+                            parameters: [choice(name: 'OPTIONS', choices: 'start\nstop\nclean', description: 'Operation to Perform?')]
+        }
+        echo "Initialize bhitra ${env.OPTIONS}"
+        build job: 'Operations', parameters: [string(name: 'OPTIONS', value: "${env.OPTIONS}")]
       }
     }
 
