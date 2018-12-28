@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Choice') {
       steps {
-        echo "Choice: ${params.CHOICE}"
+        echo "Choice: ${params.CHOICE} \n Check: ${param.SENSU_CHECK}"
       }
     }
 
