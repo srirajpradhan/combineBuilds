@@ -22,6 +22,15 @@ pipeline {
       }
     }
 
+    stage('Operations') {
+      when {
+       expression { params.CHOICE == 'Operations'}
+      }
+      steps {
+        sh 'bash ./options.sh'
+      }
+    }
+
   }
   post {
     always {
