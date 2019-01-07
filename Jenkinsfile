@@ -14,7 +14,7 @@ pipeline {
       }
       steps {
 	echo 'Initialize Bhitra Ayo!!!!!!!!!!'
-	build (job : 'example1', parameters: [string(name: 'sensu', value: '${params.SENSU_CHECK}')])
+	build (job : 'example1', parameters: [string(name: 'SENSU', value: '${params.SENSU_CHECK}')])
       }
     }
 
