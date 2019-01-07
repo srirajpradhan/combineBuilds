@@ -30,7 +30,7 @@ sudo kubectl apply -f https://docs.projectcalico.org/v3.1/getting-started/kubern
 sudo kubectl apply -f /home/vagrant/src/yml/kubernetes-dashboard.yml
 sudo kubectl create clusterrolebinding add-on-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
 
-echo "Insytalling and Configuring Mysql" 
+echo "Installing and Configuring Mysql" 
 sudo apt-get install -y mysql-server
 sudo sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
 sudo service mysql restart
@@ -38,7 +38,7 @@ sudo mysql -u root -e "grant all on *.* to 'test'@'%' identified by 'test123'"
 sudo mysql -u root -e "create database springbootdb"
 
 echo "Building Docker Image for Application"
-cd /home/vagrant/src/relevancelab/
+cd /home/vagrant/src/
 sudo docker build -t appimg:v1 .
 sudo docker pull hshar/mysql:5.5
 sudo kubectl run javatestapp --image=appimg:v1 --port=8081
