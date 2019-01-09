@@ -13,7 +13,7 @@ pipeline {
 	expression { params.CHOICE == 'Initialize'}
       }
       steps {
-	echo 'Initialize Bhitra Ayo!!!!!!!!!!'
+	echo 'Initialize Bhitra Ayo !!!!!!!!!!'
 	build (job : 'example1', parameters: [string(name: 'SENSU', value: "${params.SENSU_CHECK}")])
 	input 'Go to Next Step?'
       }
@@ -21,7 +21,7 @@ pipeline {
 
     stage('Operations') {
       steps {
-        echo 'Operations Bhitra Ayo Hai xxxxxxx!!!!!!!!!!!!!!'
+        echo 'Operations Bhitra Ayo Hai !!!!!!!!!!!!!!'
         script {
 		env.OPTIONS = input message: 'Enter Operation to Perform (start | stop | clean)', ok: 'OK',
                             parameters: [choice(name: 'OPTIONS', choices: 'start\nstop\nclean', description: 'Operation to Perform?')]
