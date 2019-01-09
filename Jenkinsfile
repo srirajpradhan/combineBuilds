@@ -21,7 +21,7 @@ pipeline {
 
     stage('Operations') {
       steps {
-        echo 'Operations Bhitra Ayo Hai!!!!!!!!!!!!!!'
+        echo 'Operations Bhitra Ayo Hai xxxxxxx!!!!!!!!!!!!!!'
         script {
 		env.OPTIONS = input message: 'Enter Operation to Perform (start | stop | clean)', ok: 'OK',
                             parameters: [choice(name: 'OPTIONS', choices: 'start\nstop\nclean', description: 'Operation to Perform?')]
