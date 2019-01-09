@@ -1,10 +1,9 @@
 #!/bin/bash
 
 FILE="Vagrantfile"
-SCRIPT="scripts/kube-cluster.sh"
+SCRIPT="/home/vagrant/src/scripts/kube-cluster.sh"
 
 mkdir -p vm
-cp $SCRIPT vm/
 cd vm
 
 set +e
@@ -17,4 +16,6 @@ if [ ! -f $FILE ]; then
 fi
 
 vagrant up
-vagrant ssh -c "sh /home/vagrant/src/scripts/kube-cluster.sh"
+vagrant ssh -c "sh $SCRIPT"
+
+set -e

@@ -1,0 +1,9 @@
+{
+"checks": {
+ "memory-percentage": {
+      "command": "check-memory-percent.rb -w 50 -c 70",
+      "interval": 10,
+      "standalone": true
+}
+}
+}

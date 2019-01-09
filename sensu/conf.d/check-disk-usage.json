@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "check_disk_usage": {
+      "command": "check-disk-usage.rb -I -w :::disk.warning|95::: -c :::disk.critical|97:::",
+      "standalone": true,
+      "subscribers": [
+        "production"
+      ],
+      "interval": 60,
+      "environment": ":::environment|production:::"
+    }
+  }
+}

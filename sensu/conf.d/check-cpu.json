@@ -1,0 +1,11 @@
+{
+"checks": {
+"cpu_usages_check": {
+"command": "check-cpu.rb -w 70 -c 90",
+"interval": 10,
+"type": "metric",
+"kind": "system",
+"standalone": true
+}
+}
+}

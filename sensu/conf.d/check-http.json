@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "http_check": {
+      "command": "check-http.rb -u http://192.168.33.10:3000",
+      "interval": 10,
+      "type": "metric",
+      "kind": "system",
+       "output": "CheckHttp OK: 200, 78572 bytes\n",
+      "standalone": true
+
+    }
+  }
+}
