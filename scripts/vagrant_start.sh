@@ -16,6 +16,6 @@ if [ ! -f $FILE ]; then
 fi
 
 vagrant up
-vagrant ssh -c "sh $SCRIPT"
+vagrant ssh -c "sudo sh $SCRIPT"
 
 set -e
